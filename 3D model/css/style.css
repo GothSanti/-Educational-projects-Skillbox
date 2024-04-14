@@ -1,0 +1,365 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Regular'),
+    url('../fonts/Roboto-Regular.woff2') format("woff2"),
+    url('../fonts/Roboto-Regular.woff') format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Bold'),
+    url('../fonts/Roboto-Bold.woff2') format("woff2"),
+    url('../fonts/Roboto-Bold.woff') format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --main-color: #FFF;
+  --second-color: #3F2AFF;
+  --third-color: #2E2B44;
+  --fourth-color: #666;
+  --fifth-color: #212133;
+  --sixth-color: #85859B;
+}
+
+body {
+  max-width: 100%;
+  min-width: 300px;
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+  background-color: var(--background-color);
+}
+
+/* glob */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.container-fluid {
+  max-width: 1920px;
+  padding: 0px;
+}
+
+.btn {
+  color: var(--main-color);
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 20px;
+  background: var(--second-color);
+  padding: 20px 59px;
+}
+
+/* header */
+.header {
+  background-color: var(--second-color);
+  padding-top: 28px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+
+.nav__list {
+  text-align: center;
+  gap: 30px;
+}
+
+.nav__item-link {
+  color: var(--main-color);
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* hero */
+.hero {
+  padding: 14px 0;
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
+}
+
+.hero__title {
+  color: var(--main-color);
+  font-family: 'Roboto';
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+
+.hero__descr {
+  color: var(--main-color);
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 70px;
+}
+
+.hero__btn {
+  padding: 24px 75px;
+}
+
+/* about */
+.about {
+  padding: 80px 0;
+}
+
+.about__title {
+  color: var(--third-color);
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+
+.about__descr {
+  color: var(--fourth-color);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 30px;
+}
+
+.about__item {
+  min-height: 80px;
+}
+
+.about__item-eye {
+  background-image: url(../img/about__icon-eye.svg);
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: left left;
+}
+
+.about__item-fingers {
+  background-image: url(../img/about__icon-fingers.svg);
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: left left;
+}
+
+.about__item-voice {
+  background-image: url(../img/about__icon-voice.svg);
+  background-repeat: no-repeat;
+  background-size: 78px;
+  background-position: left left;
+}
+
+.about__item-descr {
+  padding-left: 110px;
+  min-height: 80px;
+  color: var(--fourth-color);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+/* teachers */
+.teachers {
+  background-color: var(--fifth-color);
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.teachers__title {
+  color: var(--main-color);
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  padding-bottom: 30px;
+}
+
+.teachers__item {
+  margin-bottom: 30px;
+}
+
+.teachers__item-img {
+  min-width: auto;
+  padding-bottom: 30px;
+}
+
+.teachers__item-title {
+  color: var(--main-color);
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  padding-bottom: 15px;
+}
+
+.teachers__item-descr {
+  color: var(--sixth-color);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* courses */
+.courses {
+  padding-bottom: 50px;
+  padding-top: 80px;
+}
+
+.courses__title {
+  color: var(--fifth-color);
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  padding-bottom: 30px;
+}
+
+.courses__item {
+  border-radius: 20px;
+  background: #EDF0F9;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 30px;
+}
+
+.courses__item-head {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.courses__item-img {
+  border-radius: 20px 20px 0px 0px;
+  width:100%;
+}
+
+.courses__item-time {
+  position: absolute;
+  min-height: 24px;
+  background-image: url(../img/courses__icon.png);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: left center;
+  padding-top: 4px;
+  padding-left: 28px;
+  margin-left: -97px;
+  margin-top: 15px;
+  color: var(--main-color);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.courses__item-content {
+  flex-direction: column;
+}
+
+.courses__item-text {
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+}
+
+.courses__item-title {
+  color: var(--fifth-color);
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 30px 30px 15px 30px;
+}
+
+.courses__item-descr {
+  color: var(--fourth-color);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.courses__item-btn {
+  max-width: 202px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+/* footer */
+.footer {
+  background-color: var(--third-color);
+  padding-top: 28px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.footer__list {
+  align-items: center;
+  padding-bottom: 28px;
+}
+
+.footer__item {
+  text-align: center;
+}
+
+.footer__under {
+  text-align: center;
+  padding-top: 3px;
+  background-color: white;
+}
+
+.footer__under-text {
+  color: var(--third-color);
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer__under-letter {
+  color: var(--second-color);
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 400;
+}
